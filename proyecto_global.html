@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Proyecto Global HTML & CSS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #0f3d0f, #1b5e20);
+      color: #e8f5e9;
+    }
+
+    header {
+      background: linear-gradient(90deg, #66bb6a, #43a047);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      border-bottom: 5px solid #2e7d32;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+
+    .dedicatoria {
+      text-align: center;
+      background-color: #1b5e20;
+      padding: 1rem;
+      font-size: 1rem;
+      color: #a5d6a7;
+      font-weight: bold;
+    }
+
+    nav {
+      background-color: #2e7d32;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #c8e6c9;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 2rem;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+
+    h2 {
+      color: #a5d6a7;
+      border-bottom: 2px solid #66bb6a;
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      color: #81c784;
+      margin-top: 0.8rem;
+    }
+
+    code {
+      background: rgba(0,0,0,0.25);
+      padding: 0.15rem 0.35rem;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width:600px) {
+      header h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dedicatoria">
+    Página realizada por: Mercedes Hernández Martínez & Diego Alejandro Martínez Ramírez 5AM PG
+  </div>
+
+  <header>
+    <h1>Proyecto Global — HTML & CSS</h1>
+    <p>Compilación completa de prácticas del curso</p>
+  </header>
+
+  <nav>
+    <a href="#html">HTML</a>
+    <a href="#css">CSS</a>
+    <a href="#flexbox">Flexbox</a>
+    <a href="#grid">Grid</a>
+    <a href="#responsive">Responsive</a>
+    <a href="#animaciones">Animaciones</a>
+    <a href="#proyecto">Proyecto Final</a>
+  </nav>
+
+  <main>
+    <section id="html">
+      <h2>HTML Básico</h2>
+
+      <h3>Estructura de una etiqueta</h3>
+      <p>Una etiqueta HTML se abre y se cierra: <code>&lt;p&gt;Contenido&lt;/p&gt;</code>. Algunas son autocontenidas como <code>&lt;br&gt;</code>.</p>
+
+      <h3>Estructura de una página web</h3>
+      <p>Incluye <code>&lt;!DOCTYPE&gt;</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code> y <code>&lt;body&gt;</code>.</p>
+
+      <h3>Párrafos y encabezados</h3>
+      <p>Usamos <code>&lt;p&gt;</code> para texto y <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code> para títulos jerárquicos.</p>
+
+      <h3>Listas</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+      <ol>
+        <li>Instalar editor</li>
+        <li>Crear archivo</li>
+        <li>Escribir código</li>
+      </ol>
+
+      <h3>Enlaces</h3>
+      <p><a href="https://developer.mozilla.org/es/" target="_blank">Enlace externo a MDN</a></p>
+      <p><a href="#html">Enlace interno a esta sección</a></p>
+
+      <h3>Imágenes</h3>
+      <img src="https://cdn-icons-png.flaticon.com/512/211/211390.png"Portada de ejemplo">
+
+      <h3>Formulario básico</h3>
+      <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="Tu nombre" required><br><br>
+
+        <label for="email">Correo:</label>
+        <input type="email" id="email" placeholder="ejemplo@correo.com" required><br><br>
+
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" rows="4" cols="40" placeholder="Escribe tu mensaje..."></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <h3>Tabla</h3>
+      <table>
+        <thead>
+          <tr><th>Nombre</th><th>Edad</th><th>Ciudad</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Ana</td><td>25</td><td>México</td></tr>
+          <tr><td>Luis</td><td>30</td><td>Guadalajara</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Multimedia</h3>
+      <audio controls>
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+      </audio>
+
+      <video controls width="320">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+
+      <iframe width="320" height="180" src="https://www.youtube.com/embed/1UX-0ogyHiA" title="Video de ejemplo" frameborder="0" allowfullscreen></iframe>
+
+      <h3>HTML Avanzado</h3>
+      <p><strong>Metatags:</strong> codificación UTF-8, autor, descripción.</p>
+      <p><strong>Comentarios:</strong> <code>&lt;!-- Esto es un comentario --&gt;</code></p>
+      <p><strong>Iconos:</strong> <code>&lt;link rel="icon" href="favicon.ico"&gt;</code></p>
+
+      <h3>Textarea, Labels, Select, Datalist</h3>
+      <form>
+        <label for="comentario">Comentario:</label>
+        <textarea id="comentario" rows="3"></textarea><br><br>
+
+        <label for="color">Color favorito:</label>
+        <input list="colores" id="color">
+        <datalist id="colores">
+          <option value="Verde">
+          <option value="Azul">
+          <option value="Rojo">
+        </datalist>
+      </form>
+
+      <h3>Fieldset y Legend</h3>
+      <form>
+        <fieldset>
+          <legend>Datos personales</legend>
+          <label for="nombre2">Nombre:</label>
+          <input type="text" id="nombre2"><br><br>
+          <label for="edad">Edad:</label>
+          <input type="number" id="edad">
+        </fieldset>
+      </form>
+
+      <h3>Details y Summary</h3>
+      <details>
+        <summary>¿Qué es HTML?</summary>
+        <p>HTML es el lenguaje de marcado para crear páginas web.</p>
+      </details>
+
+      <h3>Lazy Loading</h3>
+      <img src="https://download.johnserrano.co/lazy-loading.webp" alt="Ejemplo Lazy Loading">
+
+      <h3>HTML Obsoleto</h3>
+      <p><code>&lt;center&gt;</code> ya no se recomienda. Usá <code>text-align: center</code> en CSS.</p>
+
+      <h3>HTML Semántico</h3>
+      <header>Encabezado</header>
+      <article>Contenido principal</article>
+      <footer>Pie de página</footer>
+
+      <h3>Accesibilidad Web</h3>
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirX3JQladEXbWAmDYHfGoVGoUhvI3D-V05q6DqqAqPle2h7XTG3GeB1yFFMzoEqHjaw0bRrsawYGEqDc5bQ1SqEi_J-VQf86ns8rEj9a2UjpEE_RCRgo8rrWumgAzUy2gHJjUdayHkezA/s1600/imagen.png" alt="Imagen descriptiva">
+      <button>Botón accesible</button>
+    </section>
+    <section id="css">
+      <h2>CSS Básico e Intermedio</h2>
+
+      <h3>Selectores</h3>
+      <p>Selector por etiqueta: <code>p</code>, por clase: <code>.clase</code>, por ID: <code>#id</code>.</p>
+
+      <h3>Propiedades de texto y fuente</h3>
+      <p style="font-size:1.5rem;">Texto grande</p>
+      <p style="font-style:italic;">Texto en cursiva</p>
+      <p style="text-transform:uppercase; letter-spacing:2px;">Texto en mayúsculas con espaciado</p>
+
+      <h3>Tipografías externas</h3>
+      <p style="font-family: 'Poppins', sans-serif;">Texto con fuente Poppins</p>
+
+      <h3>Modelo de caja (Box Model)</h3>
+      <div style="border:2px solid #66bb6a; padding:10px; margin:10px; background-color:#1b5e20;">
+        Elemento con contenido, padding, borde y margen
+      </div>
+
+      <h3>Colores</h3>
+      <div style="width:60px; height:60px; background-color:#66bb6a; display:inline-block; margin-right:10px;"></div>
+      <div style="width:60px; height:60px; background-color:#43a047; display:inline-block; margin-right:10px;"></div>
+      <div style="width:60px; height:60px; background-color:#2e7d32; display:inline-block;"></div>
+
+      <h3>Unidades</h3>
+      <p style="font-size:16px;">Texto en px</p>
+      <p style="font-size:1.2em;">Texto en em</p>
+      <p style="font-size:2vw;">Texto en vw</p>
+
+      <h3>Pseudoclases</h3>
+      <style>
+        .hover-demo:hover {
+          background-color: #66bb6a;
+          color: white;
+        }
+      </style>
+      <p class="hover-demo" style="padding:10px; border:1px solid #a5d6a7;">Pasa el cursor aquí</p>
+
+      <h3>Pseudoelementos</h3>
+      <style>
+        .pseudo-demo::first-letter {
+          font-size: 2rem;
+          color: #a5d6a7;
+        }
+      </style>
+      <p class="pseudo-demo">Este párrafo tiene una primera letra estilizada.</p>
+
+      <h3>Metodología BEM</h3>
+      <div class="card card--highlight">
+        <p class="card__title">Título BEM</p>
+        <p class="card__content">Contenido BEM</p>
+      </div>
+      <style>
+        .card { background-color:#2e7d32; padding:1rem; border-radius:10px; }
+        .card--highlight { border:2px solid #a5d6a7; }
+        .card__title { font-weight:bold; color:#c8e6c9; }
+        .card__content { color:#e8f5e9; }
+      </style>
+
+      <h3>Posicionamiento</h3>
+      <div style="position:relative; background-color:#1b5e20; padding:1rem;">
+        <div style="position:absolute; top:10px; right:10px; background-color:#66bb6a; padding:0.5rem; border-radius:6px;">
+          Caja absoluta
+        </div>
+        Caja relativa
+      </div>
+    </section>
+    <section id="flexbox">
+      <h2>CSS Flexbox</h2>
+      <p>Flexbox nos permite alinear y distribuir elementos dentro de un contenedor flexible.</p>
+
+      <style>
+        .flex-container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1rem;
+          justify-content: center;
+          background-color: #1b5e20;
+          padding: 1rem;
+          border-radius: 10px;
+        }
+
+        .flex-item {
+          background-color: #66bb6a;
+          padding: 1rem;
+          border-radius: 10px;
+          width: 200px;
+          text-align: center;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+          color: #fff;
+        }
+      </style>
+
+      <div class="flex-container">
+        <div class="flex-item">Elemento 1</div>
+        <div class="flex-item">Elemento 2</div>
+        <div class="flex-item">Elemento 3</div>
+      </div>
+    </section>
+
+    <section id="grid">
+      <h2>CSS Grid</h2>
+      <p>Grid nos permite crear diseños bidimensionales con filas y columnas.</p>
+
+      <style>
+        .grid-container {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 1rem;
+          background-color: #1b5e20;
+          padding: 1rem;
+          border-radius: 10px;
+        }
+
+        .grid-item {
+          background-color: #43a047;
+          padding: 1rem;
+          border-radius: 10px;
+          text-align: center;
+          color: #fff;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+      </style>
+
+      <div class="grid-container">
+        <div class="grid-item">Grid 1</div>
+        <div class="grid-item">Grid 2</div>
+        <div class="grid-item">Grid 3</div>
+        <div class="grid-item">Grid 4</div>
+      </div>
+    </section>
+    <section id="responsive">
+      <h2>Responsive Design</h2>
+      <p>Responsive Design permite que una página se adapte a diferentes tamaños de pantalla.</p>
+
+      <h3>Uso de <code>&lt;picture&gt;</code>, <code>srcset</code> y <code>media</code></h3>
+      <picture>
+        <source media="(max-width: 600px)" srcset="https://placekitten.com/300/200">
+        <source media="(min-width: 601px)" srcset="https://placekitten.com/600/400">
+        <img src="imagenes/articulo-linkedin.jpg" 
+     alt="Imagen de artículo LinkedIn" 
+     style="max-width: 100%; height: auto; border-radius: 10px;">     </picture>
+
+      <h3>Media Queries</h3>
+      <style>
+        .responsive-box {
+          background-color: #66bb6a;
+          color: white;
+          padding: 1rem;
+          text-align: center;
+          border-radius: 10px;
+        }
+
+        @media (max-width: 600px) {
+          .responsive-box {
+            background-color: #2e7d32;
+            font-size: 0.9rem;
+          }
+        }
+
+        @media (min-width: 601px) {
+          .responsive-box {
+            font-size: 1.2rem;
+          }
+        }
+      </style>
+
+      <div class="responsive-box">
+        Este bloque cambia de estilo según el tamaño de pantalla
+      </div>
+    </section>
+    <section id="animaciones">
+      <h2>Animaciones CSS</h2>
+      <p>Las animaciones permiten crear efectos visuales que mejoran la experiencia del usuario.</p>
+
+      <h3>Transición de color</h3>
+      <style>
+        .transicion {
+          background-color: #66bb6a;
+          color: white;
+          padding: 1rem;
+          border-radius: 10px;
+          transition: background-color 0.5s ease;
+        }
+
+        .transicion:hover {
+          background-color: #2e7d32;
+        }
+      </style>
+      <div class="transicion">Pasa el cursor para ver la transición</div>
+
+      <h3>Animación con @keyframes</h3>
+      <style>
+        @keyframes aparecer {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animado {
+          animation: aparecer 1s ease-out;
+          background-color: #43a047;
+          padding: 1rem;
+          border-radius: 10px;
+          text-align: center;
+          color: white;
+          margin-top: 1rem;
+        }
+      </style>
+      <div class="animado">Este bloque aparece con animación</div>
+
+      <h3>Botón animado</h3>
+      <style>
+        .boton-animado {
+          background-color: #2e7d32;
+          color: white;
+          padding: 0.8rem 1.2rem;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          font-size: 1rem;
+          transition: transform 0.3s ease;
+        }
+
+        .boton-animado:hover {
+          transform: scale(1.1);
+        }
+      </style>
+      <button class="boton-animado">Botón con efecto hover</button>
+    </section>
+    <section id="proyecto">
+      <h2>Proyecto Final — Menú Acordeón Interactivo</h2>
+      <p>Este menú acordeón muestra contenido oculto que se despliega al hacer clic.</p>
+
+      <style>
+        .accordion {
+          background-color: #2e7d32;
+          color: white;
+          cursor: pointer;
+          padding: 1rem;
+          width: 100%;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 1.1rem;
+          transition: background-color 0.3s;
+          border-radius: 8px;
+          margin-bottom: 0.5rem;
+        }
+
+        .accordion:hover {
+          background-color: #66bb6a;
+        }
+
+        .panel {
+          padding: 0 1rem;
+          background-color: rgba(255,255,255,0.05);
+          display: none;
+          overflow: hidden;
+          border-radius: 8px;
+          margin-bottom: 1rem;
+        }
+      </style>
+
+      <button class="accordion">¿Qué es HTML?</button>
+      <div class="panel">
+        <p>HTML es el lenguaje de marcado que estructura el contenido en la web.</p>
+      </div>
+
+      <button class="accordion">¿Qué es CSS?</button>
+      <div class="panel">
+        <p>CSS es el lenguaje que da estilo y presentación a las páginas web.</p>
+      </div>
+
+      <button class="accordion">¿Qué aprendimos en este curso?</button>
+      <div class="panel">
+        <p>Aprendimos a crear páginas web completas usando HTML, CSS, Flexbox, Grid, animaciones y diseño responsive.</p>
+      </div>
+
+      <script>
+        const accordions = document.querySelectorAll(".accordion");
+        accordions.forEach(btn => {
+          btn.addEventListener("click", () => {
+            btn.classList.toggle("active");
+            const panel = btn.nextElementSibling;
+            panel.style.display = panel.style.display === "block" ? "none" : "block";
+          });
+        });
+      </script>
+    </section>
+
+    <footer style="text-align:center; background-color:#1b5e20; color:#a5d6a7; padding:1.5rem; margin-top:2rem; border-top:3px solid #66bb6a;">
+      <p>Proyecto realizado por Mercedes Hernández Martínez & Diego Alejandro Martínez Ramírez</p>
+      <p>Curso: HTML y CSS desde CERO — Soy Dalto</p>
+      <p>Octubre 2025</p>
+    </footer>
+
+  </main>
+</body>
+</html>
