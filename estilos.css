@@ -1,0 +1,154 @@
+/*  Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*  Tipografía */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #e8f5e9;
+  color: #1b5e20;
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+/*  Encabezados */
+h1, h2, h3 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+/*  Enlaces */
+a {
+  color: #388e3c;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/*  Imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/*  Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+th, td {
+  border: 1px solid #a5d6a7;
+  padding: 0.5rem;
+  text-align: left;
+}
+th {
+  background-color: #66bb6a;
+  color: white;
+}
+
+/*  Formularios */
+input, textarea, select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #a5d6a7;
+  border-radius: 5px;
+}
+button {
+  background-color: #2e7d32;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #388e3c;
+}
+
+/*  Flexbox */
+.flex-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.flex-item {
+  flex: 1;
+  background-color: #c8e6c9;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+/*  Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.grid-item {
+  background-color: #a5d6a7;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+/*  Responsive Box */
+.responsive-box {
+  background-color: #66bb6a;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 10px;
+}
+@media (max-width: 600px) {
+  .responsive-box {
+    background-color: #2e7d32;
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 601px) {
+  .responsive-box {
+    font-size: 1.2rem;
+  }
+}
+
+/*  Animaciones */
+.transicion {
+  background-color: #66bb6a;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: background-color 0.5s ease;
+}
+.transicion:hover {
+  background-color: #2e7d32;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animado {
+  animation: aparecer 1s ease-out;
+  background-color: #43a047;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  margin-top: 1rem;
+}
+
+/*  Footer */
+footer {
+  text-align: center;
+  background-color: #1b5e20;
+  color: #a5d6a7;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-top: 3px solid #66bb6a;
+}
